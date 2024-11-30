@@ -4,5 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // add the tailwindcss vite plugin and it crashes
 export default defineConfig({
-	plugins: [sveltekit()]
+	plugins: [sveltekit()],
+	optimizeDeps: {
+		exclude: ['@huntabyte/ui']
+	}
 });

@@ -7,7 +7,7 @@
 	"license": "MIT",
 	"type": "module",
 	"scripts": {
-		"dev": "pnpm -F \"./packages/**\" svelte-kit sync && pnpm -r --parallel --reporter append-only --color dev"
+		"dev": "pnpm -F \"./packages/**\" sync && pnpm -r --parallel --reporter append-only --color dev"
 	},
 	"engines": {
 		"pnpm": ">=9.0.0",

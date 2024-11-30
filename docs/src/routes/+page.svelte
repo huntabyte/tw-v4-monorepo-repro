@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Button } from "@huntabyte/styles";
+	import "../styles.css";
+	import { Button } from "@huntabyte/ui";
 </script>
 
 <Button />
