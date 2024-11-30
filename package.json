@@ -1,0 +1,17 @@
+{
+	"name": "root",
+	"description": "Monorepo for TW v4 repro",
+	"private": true,
+	"version": "0.0.0",
+	"author": "Hunter Johnston <https://github.com/huntabyte>",
+	"license": "MIT",
+	"type": "module",
+	"scripts": {
+		"dev": "pnpm -F \"./packages/**\" svelte-kit sync && pnpm -r --parallel --reporter append-only --color dev"
+	},
+	"engines": {
+		"pnpm": ">=9.0.0",
+		"node": ">=20"
+	},
+	"packageManager": "pnpm@9.14.4"
+}

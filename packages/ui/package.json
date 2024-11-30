@@ -1,0 +1,49 @@
+{
+	"name": "@huntabyte/styles",
+	"version": "0.0.0",
+	"scripts": {
+		"dev": "svelte-package --watch",
+		"build": "vite build && npm run package",
+		"preview": "vite preview",
+		"package": "svelte-kit sync && svelte-package && publint",
+		"prepublishOnly": "npm run package",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"files": [
+		"dist",
+		"!dist/**/*.test.*",
+		"!dist/**/*.spec.*"
+	],
+	"sideEffects": [
+		"**/*.css"
+	],
+	"svelte": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"svelte": "./dist/index.js"
+		},
+		"./styles.css": "./dist/styles.css"
+	},
+	"peerDependencies": {
+		"svelte": "^5.0.0"
+	},
+	"devDependencies": {
+		"@sveltejs/kit": "^2.9.0",
+		"@sveltejs/package": "^2.3.7",
+		"@sveltejs/vite-plugin-svelte": "4.0.0",
+		"@tailwindcss/vite": "4.0.0-beta.4",
+		"publint": "^0.2.0",
+		"svelte": "^5.2.11",
+		"svelte-check": "^4.1.0",
+		"tailwindcss": "4.0.0-beta.4",
+		"typescript": "^5.0.0",
+		"vite": "^5.0.11"
+	},
+	"dependencies": {
+		"bits-ui": "1.0.0-next.65"
+	}
+}
